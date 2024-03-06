@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div id="error" class="error-modal">
+        <p>Insira um nome para começar</p>
+        <br>
+        <button class="error-btn" onclick="fechar()">Entendi!!!</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" onclick="window.location.href='../Menu/page.html'" class="btn btn-primary">Menu</button>
+        <button type="button" onclick="window.location.href='../Cardapio/page.html'"
+            class="btn btn-primary">Cardápio</button>
+        <button type="button" onclick="window.location.href='../Pedido/page.html'"
+            class="btn btn-primary">Pedido</button>
+    </div>
+    <h1>Pedido</h1>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Insira seu nome">
+    </div>
+    <button type="button" class="btn btn-success" onclick="comecar()">Começar</button>
+
+    <div id="selects-div" class="selects-div">
+        <h2>Olá <span id="nomePrint"></span>, vamos começar a escolher sua refeição!</h2>
+        <h3>Pratos</h3>
+        <select onchange="total()" id="selectPrato" class="form-select" aria-label="Default select example">
+            <option value="1" selected>Selecione um prato</option>
+            <option data-value="10" value="Polenta com Queijo">Polenta com Queijo</option>
+            <option data-value="19" value="Polenta Com Carne">Polenta Com Carne</option>
+            <option data-value="8" value="Polenta com Molho">Polenta com Molho</option>
+            <option data-value="12" value="Coxinha de frango">Coxinha de frango</option>
+            <option data-value="20" value="Tiras de frango frito">Tiras de frango frito</option>
+        </select>
+        <h3>Prato Feito</h3>
+        <select onchange="total()" id="selectPratoFeito" class="form-select" aria-label="Default select example">
+            <option value="1" selected>Selecione um prato feito</option>
+            <option data-value="22" value="Tradicional">Tradicional</option>
+            <option data-value="24" value="Bife a Cavalo" >Bife a Cavalo</option>
+            <option data-value="25" value="Frango a milanesa">Frango a milanesa</option>
+            <option data-value="26" value="frango a parmegiana">frango a parmegiana</option>
+            <option data-value="17" value="Frango grelhado">Frango grelhado</option>
+        </select>
+        <h3>Sanduiches</h3>
+        <select onchange="total()" id="selectSanduiche" class="form-select" aria-label="Default select example">
+            <option value="1" selected>Selecione um Sanduiche</option>
+            <option data-value="14" value="Sanduiche Natural">Sanduiche Natural</option>
+            <option data-value="30" value="Smash Burguer">Smash Burguer</option>
+            <option data-value="33" value="Baguete recheado com bacon">Baguete recheado com bacon</option>
+            <option data-value="21" value="Sopa no Pao italiano">Sopa no Pao italiano</option>
+            <option data-value="55" value="Pizza de Borda">Pizza de Borda</option>
+        </select>
+        <h3>Sobremesas</h3>
+        <select onchange="total()" id="selectSobremesa" class="form-select" aria-label="Default select example">
+            <option value="1" selected>Selecione uma sobremesa</option>
+            <option data-value="70" value="Sorvete com frutas">Sorvete com frutas</option>
+            <option data-value="1" value="Chocolate com Morango">Chocolate com Morango</option>
+            <option data-value="100"value="Gelatina com Morango">Gelatina com Morango</option>
+            <option data-value="130" value="200 doces mistos">200 doces mistos</option>
+            <option data-value="200" value="3kg de Nutella">3kg de Nutella</option>
+        </select>        
+        <h3>Bebidas</h3>
+        <select onchange="total()" id="selectBebida" class="form-select" aria-label="Default select example">
+            <option value="1" selected>Selecione uma bebida</option>
+            <option data-value="16" value="Gin Tropical">Gin Tropical</option>
+            <option data-value="17" value="Gin e licor de Morango">Gin e licor de Morango</option>
+            <option data-value="20" value="Gin e Tônica">Gin e Tônica</option>
+            <option data-value="13" value="Energetico Bally 2L">Energetico Bally 2L</option>
+            <option data-value="6" value="Powerade">Powerade</option>
+        </select>
+        <div class="botoes">
+            <button onclick="fazerPedido()" class="btn btn-success" type="button">Fazer Pedido</button>
+            <button onclick="reset()" class="btn btn-outline-secondary" type="button">Limpar</button>
+        </div>
+        <div>
+            <span class="badge bg-primary">Total: </span>
+            <span class="badge bg-secondary" id="resultado"></span>
+        </div>
+
+    </div>
+
+</body>
+
+</html> 

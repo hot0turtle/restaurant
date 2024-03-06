@@ -1,0 +1,5 @@
+Introduced onchange event where instead of needing to repressing the buttom 
+simply selecting the dish will automaticaly update the price where as my original
+code would only update once the buttom was pressed. when using change events the price
+would not change automaticaly if the selects where cleared so added "total()" which 
+resets total to 0

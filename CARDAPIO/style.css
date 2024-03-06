@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    gap: 4vh;
+    background-image: url("../imagens/blurred-background-of-a-restaurant-bar-interior-with-a-wooden-table-vertical-mobile-wallpaper-ai-generated-free-photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    width: 50px;
+    text-align: center;
+}
+
+.card {
+    margin: 5px;
+}
+
+.cards {
+    display: g;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.card-img-top {
+    width: 286px;
+    height: 180px;
+}
+
+
+.subtitulo {
+    background: inherit;
+    background-clip: text;
+    color: lightblue;
+    text-shadow: 2px 2px black;
+    margin-right: 150px;
+}
+
+.titulo {
+    color: transparent;
+    filter: invert(1);
+}
+
+@media (width >=800px) {
+
+    body {
+        background-image: url("../imagens/fundo-browser.jpg");
+    }
+
+    .Aperitivos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .sobremesas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .bebidas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .pratos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .Sanduiches {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2vh;
+    }
+}
