@@ -40,48 +40,48 @@
         <h2>Olá <span id="nomePrint"></span>, vamos começar a escolher sua refeição!</h2>
         <h3>Pratos</h3>
         <select onchange="total()" id="selectPrato" class="form-select" aria-label="Default select example">
-            <option value="1" selected>Selecione um prato</option>
-            <option data-value="10" value="Polenta com Queijo">Polenta com Queijo</option>
-            <option data-value="19" value="Polenta Com Carne">Polenta Com Carne</option>
-            <option data-value="8" value="Polenta com Molho">Polenta com Molho</option>
-            <option data-value="12" value="Coxinha de frango">Coxinha de frango</option>
-            <option data-value="20" value="Tiras de frango frito">Tiras de frango frito</option>
+            <option value="0" selected>Selecione um prato</option>
+            <option value="Polenta com Queijo">Polenta com Queijo</option>
+            <option value="Polenta Com Carne">Polenta Com Carne</option>
+            <option value="Polenta com Molho">Polenta com Molho</option>
+            <option value="Coxinha de frango">Coxinha de frango</option>
+            <option value="Tiras de frango frito">Tiras de frango frito</option>
         </select>
         <h3>Prato Feito</h3>
         <select onchange="total()" id="selectPratoFeito" class="form-select" aria-label="Default select example">
-            <option value="1" selected>Selecione um prato feito</option>
-            <option data-value="22" value="Tradicional">Tradicional</option>
-            <option data-value="24" value="Bife a Cavalo" >Bife a Cavalo</option>
-            <option data-value="25" value="Frango a milanesa">Frango a milanesa</option>
-            <option data-value="26" value="frango a parmegiana">frango a parmegiana</option>
-            <option data-value="17" value="Frango grelhado">Frango grelhado</option>
+            <option value="0" selected>Selecione um prato feito</option>
+            <option value="Tradicional">Tradicional</option>
+            <option value="Bife a Cavalo" >Bife a Cavalo</option>
+            <option value="Frango a milanesa">Frango a milanesa</option>
+            <option value="frango a parmegiana">frango a parmegiana</option>
+            <option value="Frango grelhado">Frango grelhado</option>
         </select>
         <h3>Sanduiches</h3>
         <select onchange="total()" id="selectSanduiche" class="form-select" aria-label="Default select example">
-            <option value="1" selected>Selecione um Sanduiche</option>
-            <option data-value="14" value="Sanduiche Natural">Sanduiche Natural</option>
-            <option data-value="30" value="Smash Burguer">Smash Burguer</option>
-            <option data-value="33" value="Baguete recheado com bacon">Baguete recheado com bacon</option>
-            <option data-value="21" value="Sopa no Pao italiano">Sopa no Pao italiano</option>
-            <option data-value="55" value="Pizza de Borda">Pizza de Borda</option>
+            <option value="0" selected>Selecione um Sanduiche</option>
+            <option value="Sanduiche Natural">Sanduiche Natural</option>
+            <option value="Smash Burguer">Smash Burguer</option>
+            <option value="Baguete recheado com bacon">Baguete recheado com bacon</option>
+            <option value="Sopa no Pao italiano">Sopa no Pao italiano</option>
+            <option value="Pizza de Borda">Pizza de Borda</option>
         </select>
         <h3>Sobremesas</h3>
         <select onchange="total()" id="selectSobremesa" class="form-select" aria-label="Default select example">
-            <option value="1" selected>Selecione uma sobremesa</option>
-            <option data-value="70" value="Sorvete com frutas">Sorvete com frutas</option>
-            <option data-value="1" value="Chocolate com Morango">Chocolate com Morango</option>
-            <option data-value="100"value="Gelatina com Morango">Gelatina com Morango</option>
-            <option data-value="130" value="200 doces mistos">200 doces mistos</option>
-            <option data-value="200" value="3kg de Nutella">3kg de Nutella</option>
+            <option value="0" selected>Selecione uma sobremesa</option>
+            <option value="Sorvete com frutas">Sorvete com frutas</option>
+            <option value="Chocolate com Morango">Chocolate com Morango</option>
+            <option value="Gelatina com Morango">Gelatina com Morango</option>
+            <option value="200 doces mistos">200 doces mistos</option>
+            <option value="3kg de Nutella">3kg de Nutella</option>
         </select>        
         <h3>Bebidas</h3>
         <select onchange="total()" id="selectBebida" class="form-select" aria-label="Default select example">
-            <option value="1" selected>Selecione uma bebida</option>
-            <option data-value="16" value="Gin Tropical">Gin Tropical</option>
-            <option data-value="17" value="Gin e licor de Morango">Gin e licor de Morango</option>
-            <option data-value="20" value="Gin e Tônica">Gin e Tônica</option>
-            <option data-value="13" value="Energetico Bally 2L">Energetico Bally 2L</option>
-            <option data-value="6" value="Powerade">Powerade</option>
+            <option value="0" selected>Selecione uma bebida</option>
+            <option value="Gin Tropical">Gin Tropical</option>
+            <option value="Gin e licor de Morango">Gin e licor de Morango</option>
+            <option value="Gin e Tônica">Gin e Tônica</option>
+            <option value="Energetico Bally 2L">Energetico Bally 2L</option>
+            <option value="Powerade">Powerade</option>
         </select>
         <div class="botoes">
             <button onclick="fazerPedido()" class="btn btn-success" type="button">Fazer Pedido</button>
@@ -91,7 +91,7 @@
             <span class="badge bg-primary">Total: </span>
             <span class="badge bg-secondary" id="resultado"></span>
         </div>
-
+        
     </div>
 
 </body>
