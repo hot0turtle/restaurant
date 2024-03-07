@@ -39,7 +39,7 @@
     <div id="selects-div" class="selects-div">
         <h2>Olá <span id="nomePrint"></span>, vamos começar a escolher sua refeição!</h2>
         <h3>Pratos</h3>
-        <select onchange="totalbt()" id="selectPrato" class="form-select" aria-label="Default select example">
+        <select id="selectPrato" class="form-select" aria-label="Default select example">
             <option value="0" selected>Selecione um prato</option>
             <option value="Polenta com Queijo">Polenta com Queijo</option>
             <option value="Polenta Com Carne">Polenta Com Carne</option>
@@ -48,7 +48,7 @@
             <option value="Tiras de frango frito">Tiras de frango frito</option>
         </select>
         <h3>Prato Feito</h3>
-        <select onchange="totalbt()" id="selectPratoFeito" class="form-select" aria-label="Default select example">
+        <select id="selectPratoFeito" class="form-select" aria-label="Default select example">
             <option value="0" selected>Selecione um prato feito</option>
             <option value="Tradicional">Tradicional</option>
             <option value="Bife a Cavalo" >Bife a Cavalo</option>
@@ -57,7 +57,7 @@
             <option value="Frango grelhado">Frango grelhado</option>
         </select>
         <h3>Sanduiches</h3>
-        <select onchange="totalbt()" id="selectSanduiche" class="form-select" aria-label="Default select example">
+        <select id="selectSanduiche" class="form-select" aria-label="Default select example">
             <option value="0" selected>Selecione um Sanduiche</option>
             <option value="Sanduiche Natural">Sanduiche Natural</option>
             <option value="Smash Burguer">Smash Burguer</option>
@@ -66,7 +66,7 @@
             <option value="Pizza de Borda">Pizza de Borda</option>
         </select>
         <h3>Sobremesas</h3>
-        <select onchange="totalbt()" id="selectSobremesa" class="form-select" aria-label="Default select example">
+        <select id="selectSobremesa" class="form-select" aria-label="Default select example">
             <option value="0" selected>Selecione uma sobremesa</option>
             <option value="Sorvete com frutas">Sorvete com frutas</option>
             <option value="Chocolate com Morango">Chocolate com Morango</option>
@@ -75,7 +75,7 @@
             <option value="3kg de Nutella">3kg de Nutella</option>
         </select>        
         <h3>Bebidas</h3>
-        <select onchange="totalbt()" id="selectBebida" class="form-select" aria-label="Default select example">
+        <select id="selectBebida" class="form-select" aria-label="Default select example">
             <option value="0" selected>Selecione uma bebida</option>
             <option value="Gin Tropical">Gin Tropical</option>
             <option value="Gin e licor de Morango">Gin e licor de Morango</option>
@@ -84,6 +84,7 @@
             <option value="Powerade">Powerade</option>
         </select>
         <div class="botoes">
+            <button onclick="totalbt()" class="btn btn-success" type="button">Calcular total</button>
             <button onclick="fazerPedido()" class="btn btn-success" type="button">Fazer Pedido</button>
             <button onclick="reset()" class="btn btn-outline-secondary" type="button">Limpar</button>
         </div>

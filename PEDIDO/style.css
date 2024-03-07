@@ -19,6 +19,10 @@ body{
     color: whitesmoke;
 }
 
+.form-select{
+  max-height: 40%;
+}
+
 .badge {
   font-size: 1.3rem !important;
 }

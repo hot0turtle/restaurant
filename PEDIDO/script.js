@@ -30,7 +30,7 @@ function totalbt() {
     var vSA = document.getElementById("selectSanduiche").value;
     var vB = document.getElementById("selectBebida").value;
 
-   
+    total = 0;
     var name = "";
 
     var selectedOptions = [];
@@ -161,39 +161,39 @@ function totalbt() {
 
     // Switch for selectBebida
     switch (vB) {
-        case "Gin Tropical":
-            name = "Gin Tropical";
-            total += 20;
-            selectedOptions.push(name);
-            break;
-        case "Gin e licor de Morango":
-            name = "Gin e licor de Morango";
-            total += 17;
-            selectedOptions.push(name);
-            break;
-        case "Gin e Tônica":
-            name = "Gin e Tônica";
-            total += 16;
-            selectedOptions.push(name);
-            break;
-        case "Energetico Bally 2L":
-            name = "Energetico Bally 2L";
-            total += 13;
-            selectedOptions.push(name);
-            break;
-        case "Powerade":
-            name = "Powerade";
-            total += 6;
-            selectedOptions.push(name);
-            break;
-        default:
-            name = "Selecione uma bebida";
+        
+            case "Gin Tropical":
+                name = "Gin Tropical";
+                total += 20;
+                selectedOptions.push(name);
+                break;
+            case "Gin e licor de Morango":
+                name = "Gin e licor de Morango";
+                total += 17;
+                selectedOptions.push(name);
+                break;
+            case "Gin e Tônica":
+                name = "Gin e Tônica";
+                total += 16;
+                selectedOptions.push(name);
+                break;
+            case "Energetico Bally 2L":
+                name = "Energetico Bally 2L";
+                total += 13;
+                selectedOptions.push(name);
+                break;
+            case "Powerade":
+                name = "Powerade";
+                total += 6;
+                selectedOptions.push(name);
+                break;
+            default:
+                name = "Selecione uma bebida";
     }
 
     document.getElementById('resultado').textContent = "R$" + total + ",00";
     displaySelectedOptions(selectedOptions);
-    console.log(total)
-    console.log(typeof total)
+
 }
 
 
@@ -204,7 +204,8 @@ function displaySelectedOptions(options) {
     for (var i = 0; i < options.length; i++) {
         var listItem = document.createElement('li');
         listItem.textContent = options[i];
-        listElement.appendChild(listItem);
+        listElement.appendChild(listItem).scrollIntoView();;
+        
     }
 }
 function reset() {
@@ -228,14 +229,13 @@ function reset() {
         // return defaultSelected property of the option
         return 0;
     });
-
-    total();
+    history.go(0);
 }
 
 function fazerPedido() {
     const date = new Date();
     var numeroTelefone = "32"
-    var linkzap = "https://wa.me/" + numeroTelefone + "?text=Total:" + total + " " +date
+    var linkzap = "https://wa.me/" + numeroTelefone + "?text=Total:R$:" + total + " " + date
 
     window.open(linkzap,"_blank");
 }
